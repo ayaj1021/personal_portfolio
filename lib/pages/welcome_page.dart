@@ -57,47 +57,47 @@ class _WelcomePageState extends State<WelcomePage> {
                           ),
                           const SizedBox(height: 16),
                           const Text(
-                            name,
+                            'My name is $name',
                             style: TextStyle(
-                              fontSize: 50,
+                              fontSize: 40,
                               fontWeight: FontWeight.w600,
                               color: Colors.white,
                             ),
                           ),
-                          SizedBox(
-                           // height: 60,
-                           width: MediaQuery.of(context).size.width,
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: <Widget>[
-                                const Text(
-                                  'I\'m',
-                                  style: TextStyle(
-                                    fontFamily: 'Horizon',
-                                    fontSize: 40,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                                const SizedBox(width: 12),
-                                DefaultTextStyle(
-                                  style: const TextStyle(
-                                    fontSize: 40,
-                                    fontFamily: 'Horizon',
-                                    color: Colors.white,
-                                  ),
-                                  child: AnimatedTextKit(
-                                    repeatForever: true,
-                                    animatedTexts: [
-                                      RotateAnimatedText('Passionate',),
-                                      RotateAnimatedText('Hard Working'),
-                                      RotateAnimatedText('Resourceful'),
-                                    ],
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
-                          const SizedBox(height: 16),
+                          // SizedBox(
+                          //  // height: 60,
+                          //  width: MediaQuery.of(context).size.width,
+                          //   child: Row(
+                          //     mainAxisSize: MainAxisSize.min,
+                          //     children: <Widget>[
+                          //       const Text(
+                          //         'I\'m',
+                          //         style: TextStyle(
+                          //           fontFamily: 'Horizon',
+                          //           fontSize: 300,
+                          //           color: Colors.white,
+                          //         ),
+                          //       ),
+                          //       const SizedBox(width: 12),
+                          //       DefaultTextStyle(
+                          //         style: const TextStyle(
+                          //           fontSize: 300,
+                          //           fontFamily: 'Horizon',
+                          //           color: Colors.white,
+                          //         ),
+                          //         child: AnimatedTextKit(
+                          //           repeatForever: true,
+                          //           animatedTexts: [
+                          //             RotateAnimatedText('Passionate',),
+                          //             RotateAnimatedText('Hard Working'),
+                          //             RotateAnimatedText('Resourceful'),
+                          //           ],
+                          //         ),
+                          //       )
+                          //     ],
+                          //   ),
+                          // ),
+                          // const SizedBox(height: 16),
                           const Padding(
                             padding: EdgeInsets.only(left: 16, right: 16),
                             child: Text(
