@@ -5,7 +5,6 @@ import 'package:my_portfolio/utils/constants.dart';
 import 'package:my_portfolio/utils/screen_helper.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
 
-
 class AboutPage extends StatelessWidget {
   const AboutPage({super.key});
 
@@ -22,41 +21,43 @@ class AboutPage extends StatelessWidget {
 Widget _buildUi(double width, BuildContext context) => SizedBox(
       height: MediaQuery.of(context).size.height,
       child: Center(
-        child: LayoutBuilder(builder: (context, constraints) {
-          final style = GoogleFonts.oswald(
-            color: Colors.white,
-            fontSize: 24,
-            height: 1.3,
-          );
-          return ResponsiveWrapper(
-              maxWidth: width,
-              minWidth: width,
-              child: Flex(
-                direction: ScreenHelper.isMobile(context)
-                    ? Axis.vertical
-                    : Axis.horizontal,
-                children: [
-                  Expanded(
-                    flex: ScreenHelper.isMobile(context) ? 0 : 3,
-                    child: Lottie.asset(
-                      'assets/animation/coder.json',
-                      width: 500,
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            final style = GoogleFonts.oswald(
+              color: Colors.white,
+              fontSize: 24,
+              height: 1.3,
+            );
+            return ResponsiveWrapper(
+                maxWidth: width,
+                minWidth: width,
+                child: Flex(
+                  direction: ScreenHelper.isMobile(context)
+                      ? Axis.vertical
+                      : Axis.horizontal,
+                  children: [
+                    Expanded(
+                      flex: ScreenHelper.isMobile(context) ? 0 : 3,
+                      child: Lottie.asset(
+                        'assets/animation/coder.json',
+                        width: 500,
+                      ),
                     ),
-                  ),
-                  const SizedBox(width: 40),
-                  Expanded(
-                    flex: ScreenHelper.isMobile(context) ? 0 : 4,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(aboutFirst, style: style),
-                        Text(aboutSecond, style: style),
-                        const SizedBox(height: 5)
-                      ],
+                    const SizedBox(width: 40),
+                    Expanded(
+                      flex: ScreenHelper.isMobile(context) ? 0 : 4,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(aboutFirst, style: style),
+                          Text(aboutSecond, style: style),
+                          const SizedBox(height: 5)
+                        ],
+                      ),
                     ),
-                  ),
-                ],
-              ));
-        }),
+                  ],
+                ));
+          },
+        ),
       ),
     );
