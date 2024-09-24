@@ -6,7 +6,6 @@ import 'package:my_portfolio/utils/screen_helper.dart';
 import 'package:my_portfolio/utils/utils.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
 
-
 class EducationPage extends StatelessWidget {
   const EducationPage({super.key});
 
@@ -58,11 +57,19 @@ class EducationPage extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    education.period,
+                                    education.institution,
                                     style: GoogleFonts.oswald(
                                       color: Colors.white,
                                       fontWeight: FontWeight.w700,
                                       fontSize: 20,
+                                    ),
+                                  ),
+                                  Text(
+                                    education.period,
+                                    style: GoogleFonts.oswald(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: 15,
                                     ),
                                   ),
                                   const SizedBox(height: 5),

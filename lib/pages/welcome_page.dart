@@ -43,7 +43,7 @@ class _WelcomePageState extends State<WelcomePage> {
                       flex: ScreenHelper.isMobile(context) ? 0 : 3,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           const SizedBox(height: 24),
@@ -99,7 +99,7 @@ class _WelcomePageState extends State<WelcomePage> {
                           // ),
                           // const SizedBox(height: 16),
                           const Padding(
-                            padding: EdgeInsets.only(left: 16, right: 16),
+                            padding: EdgeInsets.only(left: 5, right: 16),
                             child: Text(
                               miniDescription,
                               style: TextStyle(

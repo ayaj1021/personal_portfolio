@@ -7,7 +7,6 @@ import 'package:my_portfolio/utils/screen_helper.dart';
 import 'package:my_portfolio/utils/utils.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
 
-
 class ProjectsPage extends StatelessWidget {
   const ProjectsPage({super.key});
 
@@ -43,7 +42,7 @@ class ProjectsPage extends StatelessWidget {
                   constraints:
                       const BoxConstraints(maxWidth: 400, maxHeight: 700),
                   child: const Text(
-                    'This are my best projects built in love with Flutter',
+                    'These are some of my best projects built with Flutter',
                     style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                 )
@@ -73,8 +72,8 @@ class ProjectsPage extends StatelessWidget {
                               ),
                             ),
                             IconButton(
-                              onPressed: () => Utils.launchURL('github.com/'),
-                              icon: const FaIcon(FontAwesomeIcons.github),
+                              onPressed: () => Utils.launchURL(project.gitLink),
+                              icon: const FaIcon(FontAwesomeIcons.googlePlay),
                               color: const Color(0xFFD9DEEC),
                               iconSize: 24,
                             ),
